@@ -1,0 +1,18 @@
+#map-container {
+    position: relative; 
+    padding-bottom: 50%; 
+    height: 0; 
+    overflow: hidden;
+}
+#map {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100% !important; 
+    height: 100% !important;
+}
+#info-window {
+    width: 150px; 
+    text-align: center;
+    height: 40px;
+}
