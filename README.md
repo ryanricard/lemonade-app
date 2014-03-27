@@ -52,10 +52,10 @@ This repository contains instructions and source code for a simple web app that 
 1. Create empty code files to go into those subdirectories
 
     ```
-    touch web.js
-    touch public/index.html
-    touch public/css/index.css
-    touch public/js/index.js
+    $ touch web.js
+    $ touch public/index.html
+    $ touch public/css/index.css
+    $ touch public/js/index.js
     ```
 
 1. Open each of the above files in **Sublime** and copy/paste their associated content from the following sources:
