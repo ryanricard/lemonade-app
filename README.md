@@ -60,10 +60,13 @@ This repository contains instructions and source code for a simple web app that 
 
 1. Open each of the above files in **Sublime** and copy/paste their associated content from the following sources:
 
-    * [/web.js](/web.js)
-    * [/public/index.html](/public/index.html)
-    * [/public/css/index.css](/public/css/index.css)
-    * [/public/js/index.js](/public/js/index.js)
+    [/web.js](/web.js)
+    
+    [/public/index.html](/public/index.html)
+    
+    [/public/css/index.css](/public/css/index.css)
+    
+    [/public/js/index.js](/public/js/index.js)
 
 1. Start your app
 
