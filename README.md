@@ -19,7 +19,7 @@ This repository contains instructions and source code for a simple web app that 
     $ cd lemonade-app
     ```
 
-2. Initialize the Node app
+1. Initialize the Node app
 
     ```
     $ npm init
@@ -31,17 +31,17 @@ This repository contains instructions and source code for a simple web app that 
     entry point: (index.js) web.js
     ```
 
-3. Install Express.js
+1. Install Express.js
 
     ```
     $ npm install express --save
     ```
 
-4. Run **Sublime Text 2** and open the project directory
+1. Run **Sublime Text 2** and open the project directory
 
     *File* menu > *Open...* > (browse to above directory)
 
-5. Create project subdirectories for the code
+1. Create project subdirectories for the code
 
     ```
     $ mkdir public
@@ -49,7 +49,7 @@ This repository contains instructions and source code for a simple web app that 
     $ mkdir public/js
     ```
 
-6. Create empty code files to go into those subdirectories
+1. Create empty code files to go into those subdirectories
 
     ```
     touch web.js
@@ -58,14 +58,14 @@ This repository contains instructions and source code for a simple web app that 
     touch public/js/index.js
     ```
 
-7. Open each of the above files in **Sublime** and copy/paste their associated content from the following sources:
+1. Open each of the above files in **Sublime** and copy/paste their associated content from the following sources:
 
     * [/web.js](/web.js)
     * [/public/index.html](/public/index.html)
     * [/public/css/index.css](/public/css/index.css)
     * [/public/js/index.js](/public/js/index.js)
 
-8. Start your app
+1. Start your app
 
     ```
     $ node web.js
@@ -77,7 +77,7 @@ This repository contains instructions and source code for a simple web app that 
     Listening on 5001
     ```
 
-9. View your app in your browser
+1. View your app in your browser
 
     [http://localhost:5001](http://localhost:5001)
     
@@ -91,6 +91,6 @@ This repository contains instructions and source code for a simple web app that 
 
 * The page then renders a [Google Maps](https://developers.google.com/maps/) object centered on the location returned by the API and creates an associated [Marker](https://developers.google.com/maps/documentation/javascript/reference?csw=1#Marker) and [InfoWindow](https://developers.google.com/maps/documentation/javascript/reference?csw=1#InfoWindow) to pinpoint the location of the lemonade stand.
 
-## Make it awesome?
+## Make it awesome!
 
 So having your own app idea running on your laptop is great, but wouldn't it be really awesome if you could share it with the world?  Check out [the next chapter](https://github.com/TargetRAD/lemonade-app/tree/awesome) of this app's adventure and learn how to deploy your app to the cloud...
