@@ -94,4 +94,12 @@ In addition to the [prerequisites you've already set up for the local app](https
 
 ## What did I just do?
 
-(more)
+* In a few simple steps, you pushed your app to [Heroku](http://heroku.com), a [PaaS](http://en.wikipedia.org/wiki/Platform_as_a_service) provider that allows people to host their apps and API's in the cloud.  We essetially followed their [Getting Started guide](https://devcenter.heroku.com/articles/quickstart) to deploy our Lemonade Stand app.
+
+* Heroku uses [Git](http://git-scm.com/) to deploy your app.  We created a local git repository, committed our code, and *pushed* it to a remote repository set up by Heroku when they provisioned our app.  To deploy updates, all we have to do is commit those changes to our local repository and push again.
+
+* Heroku gives you a generated URL under their __*.herokuapp.com__ domain.  If you want to associate your app with a custom domain, you can learn more about that [here](https://devcenter.heroku.com/articles/custom-domains).
+
+* Wanna see a live version of the Lemonade Stand App?  Check out: 
+
+    http://lemonade.targetrad.com
