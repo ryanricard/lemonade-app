@@ -20,8 +20,9 @@ In addition to the [prerequisites you've already set up for the local app](https
 
 1. Open each of the above files in **Sublime Text 2** and copy/paste their associated content from the following sources:
 
-    * [Procfile](/Procfile)
-    * [.gitignore](/.gitignore)
+    [Procfile](/Procfile)
+    
+    [.gitignore](/.gitignore)
 
 1. Initialize a local Git repository
 
