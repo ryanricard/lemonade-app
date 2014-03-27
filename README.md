@@ -43,7 +43,9 @@ In addition to the [prerequisites you've already set up for the local app](https
     $ heroku login
     ```
     
-    Enter the credentials you set up in the [Prerequisites](#prerequisites)
+    Enter the credentials you set up in the [Prerequisites](#prerequisites).
+
+    If Heroku reports that you don't have an existing public key and asks if you'd like to create one, answer yes!
 
 1. Create your Heroku app
 
@@ -69,6 +71,8 @@ In addition to the [prerequisites you've already set up for the local app](https
     $ git push heroku master
     ```
     
+    If you get a warning that the authenticity of the host heroku.com can't be established and if you'd like to to continue connecting, thereby trusting the Heroku RSA fingerprint, choose yes!
+
     You'll see a bunch of output, but if everything was successful, the end will look something like this:
     
     ```
