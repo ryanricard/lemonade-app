@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="./css/index.css" />
+        <!--
+        The following style block defines the syling of the page elements.
+        NOTE: In larger scale web apps, this style block should go into a separate .css file
+        -->
+        <style type="text/css">
+            /* styles for the div contiaining the map */
+            #map-container {
+                position: relative;
+                padding-bottom: 50%;
+                height: 0;
+                overflow: hidden;
+            }
+
+            /* styles for the map div itself */
+            #map {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            /* styles for the pop-up InfoWindow */
+            #info-window {
+                width: 150px;
+                text-align: center;
+                height: 40px;
+            }
+        </style>
+
         <title>Lemonade Stand App</title>
     </head>
 
     <body>
+        <!-- 
+        This div block defines the structure of the page
+        -->
         <div>
             <h1>Lemonade Stand App</h1>
 
             The stand is here today:
             <div id="map-container">
-                <div id="map"></div>    
+                <div id="map"></div>
             </div>
         </div>
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
+
+        <!--
+        This following script block contains our application's logic!
+        NOTE: In larger scale web apps, this script block should go into a separate .js file
+        -->
+        <script type="text/javascript">
+            // when the page is done loading...
+            $(document).ready(function () {
+
+                // call the API to get today's location of the lemonade stand
+                $.ajax({
+                    type: 'GET',
+                    // TIP: go ahead and try this URL in your browser to see the raw data!
+                    url: 'http://api.lemonade.targetrad.com/location/today',
+                    dataType: 'json'
+                }).done(function (data) {
+                    // the API call has returned and the result is in the 'data' variable
+
+                    // create a Google Maps LatLng object pointing to the stand's location
+                    var standLocation = new google.maps.LatLng(data.lat, data.long);
+
+                    // create a new Map object centered on that location
+                    var mapOptions = {
+                      center: standLocation,
+                      zoom: 15
+                    };
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                    // add a marker to the map that pinpoints the stand's location
+                    var marker = new google.maps.Marker({
+                        position: standLocation,
+                        map: map
+                    });
+
+                    // add a pop-up InfoWindow to show the location's description
+                    var content = '<div id="info-window">' + data.description + '</div>';
+                    var infoWindow = new google.maps.InfoWindow({ content: content });
+                    infoWindow.open(map, marker);
+                });
+            });
+        </script>
     </body>
 </html>
