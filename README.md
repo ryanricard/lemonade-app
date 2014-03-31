@@ -41,41 +41,33 @@ This repository contains instructions and source code for a simple web app that 
 
     *File* menu > *Open...* > (browse to above directory)
 
-1. Create project subdirectories for the code
+1. Create the `public` subdirectory for our static content
 
     ```
     $ mkdir public
-    $ mkdir public/css
-    $ mkdir public/js
     ```
 
-1. Create empty code files to go into those subdirectories
+1. Create empty code files to go into the project
 
     ```
     $ touch web.js
     $ touch public/index.html
-    $ touch public/css/index.css
-    $ touch public/js/index.js
     ```
 
 1. Open each of the above files in **Sublime** and copy/paste their associated content from the following sources:
 
     [/web.js](/web.js)
-    
+
     [/public/index.html](/public/index.html)
-    
-    [/public/css/index.css](/public/css/index.css)
-    
-    [/public/js/index.js](/public/js/index.js)
 
 1. Start your app
 
     ```
     $ node web.js
     ```
-    
+
     You should see output that looks like this:
-    
+
     ```
     Listening on 5001
     ```
@@ -83,12 +75,14 @@ This repository contains instructions and source code for a simple web app that 
 1. View your app in your browser
 
     [http://localhost:5001](http://localhost:5001)
-    
+
 ## What's going on?
 
-* The [web.js](/web.js) file is the only server-side script, and it's basically serving up static client-side content in the `public` directory.
-* The [index.html](/public/index.html) and [index.css](/public/css/index.css) files provide the layout and styling of the web app.  The real magic happens in [index.js](/public/js/index.js).
-* When the page first loads, [index.js](/public/js/index.js) makes an AJAX call to the [Lemonade Stand API](http://api.lemonade.targetrad.com/location/today) to get today's location of the stand.
+* The [web.js](/web.js) file is the only server-side code (running in Node.js), and it's basically serving up static client-side content out of the `public` directory.
+
+* The [public/index.html](/public/index.html) file is essentially the entire client-side app.  The HTML in the page provides the layout, the `<style>` block provides the CSS styling.  The real magic happens in `<script>` block that contains the client-side JavaScript.
+
+* When the page first loads, that JavaScript code makes an AJAX call to the [Lemonade Stand API](http://api.lemonade.targetrad.com/location/today) to get today's location of the stand.
 
   **NOTE:** That API is just for demo purposes and actually randomly returns one of a handful of locations with each call.  The API is a Heroku app and you can see its source code [here](https://github.com/TargetRAD/lemonade-api).
 

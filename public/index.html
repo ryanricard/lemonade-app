@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="./css/index.css" />
+        <style type="text/css">
+            #map-container {
+                position: relative;
+                padding-bottom: 50%;
+                height: 0;
+                overflow: hidden;
+            }
+            #map {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
+            #info-window {
+                width: 150px;
+                text-align: center;
+                height: 40px;
+            }
+        </style>
+
         <title>Lemonade Stand App</title>
     </head>
 
@@ -11,12 +31,39 @@
 
             The stand is here today:
             <div id="map-container">
-                <div id="map"></div>    
+                <div id="map"></div>
             </div>
         </div>
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://api.lemonade.targetrad.com/location/today',
+                    dataType: 'json'
+                }).done(function (data) {
+                    var standLocation = new google.maps.LatLng(data.lat, data.long);
+
+                    var mapOptions = {
+                      center: standLocation,
+                      zoom: 15
+                    };
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+
+                    var marker = new google.maps.Marker({
+                        position: standLocation,
+                        map: map
+                    });
+
+                    var content = '<div id="info-window">' + data.description + '</div>';
+                    var infoWindow = new google.maps.InfoWindow({ content: content });
+                    infoWindow.open(map, marker);
+                });
+            });
+        </script>
     </body>
 </html>
