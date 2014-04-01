@@ -6,23 +6,40 @@ This repository contains instructions and source code for a simple web app that 
 
 ## Prerequisites
 
-1. Admin rights on your Mac
-2. [Install Node.js](http://nodejs.org/download/)
-3. [Install Sublime Text 2](http://www.sublimetext.com/2) (any decent text editor will do)
+1. A **Mac** (running OSX 10.8 or better) or a **PC** (running Windows 7 or better)
+1. Admin rights on your Mac or PC
+1. [Install Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+1. [Install Node.js](http://nodejs.org/download/)
+1. [Install Sublime Text 2](http://www.sublimetext.com/2) (any decent text editor will do)
 
 ## Steps
 
-1. Create the app directory
+1. Open a command prompt
 
+    *Mac*: Run the **Terminal** app
+
+    *Windows*: Start > Run > `cmd`
+
+1. In the command prompt, create the app directory
+
+    *Mac*
     ```
-    $ mkdir lemonade-app
-    $ cd lemonade-app
+    cd ~/Documents
+    mkdir lemonade-app
+    cd lemonade-app
+    ```
+
+    *Windows*
+    ```
+    cd %USERPROFILE%\Documents
+    mkdir lemonade-app
+    cd lemonade-app
     ```
 
 1. Initialize the Node app
 
     ```
-    $ npm init
+    npm init
     ```
 
     Accept all defaults in the wizard except `entry point`, which should be `web.js`:
@@ -34,24 +51,33 @@ This repository contains instructions and source code for a simple web app that 
 1. Install Express.js
 
     ```
-    $ npm install express --save
+    npm install express --save
     ```
 
 1. Run **Sublime Text 2** and open the project directory
 
-    *File* menu > *Open...* > (browse to above directory)
+    *Mac*: *File* menu > *Open...* > (browse to above directory)
+
+    *Windows*: *File* menu > *Open Folder...* > (browse to above directory)
 
 1. Create the `public` subdirectory for our static content
 
     ```
-    $ mkdir public
+    mkdir public
     ```
 
 1. Create empty code files to go into the project
 
+    *Mac*
     ```
-    $ touch web.js
-    $ touch public/index.html
+    touch web.js
+    touch public/index.html
+    ```
+
+    *Windows*
+    ```
+    type NUL > web.js
+    type NUL > public\index.html
     ```
 
 1. Open each of the above files in **Sublime** and copy/paste their associated content from the following sources:
@@ -63,7 +89,7 @@ This repository contains instructions and source code for a simple web app that 
 1. Start your app
 
     ```
-    $ node web.js
+    node web.js
     ```
 
     You should see output that looks like this:
