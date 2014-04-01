@@ -11,11 +11,30 @@ In addition to the [prerequisites you've already set up for the local app](https
 
 ## Steps
 
+1. Open up your command prompt again and make sure you're back in your project's directory
+
+    *Mac*
+    ```
+    cd ~/Documents/lemonade-app
+    ```
+
+    *Windows*
+    ```
+    cd %USERPROFILE%\Documents\lemonade-app
+    ```
+
 1. Create empty code files necessary for deployment to Heroku
 
+    *Mac*
     ```
-    $ touch Procfile
-    $ touch .gitignore
+    touch Procfile
+    touch .gitignore
+    ```
+
+    *Windows*
+    ```
+    type NUL > Procfile
+    type NUL > .gitignore
     ```
 
 1. Open each of the above files in **Sublime Text 2** and copy/paste their associated content from the following sources:
@@ -24,33 +43,59 @@ In addition to the [prerequisites you've already set up for the local app](https
 
     [.gitignore](/.gitignore)
 
+1. Tell Git who you are
+
+    **NOTE**: You don't need to this if you've already got Git set up with your name and email
+
+    ```
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    ```
+
 1. Initialize a local Git repository
 
     ```
-    $ git init
+    git init
     ```
 
 1. Perform your first Git commit
 
     ```
-    $ git add .
-    $ git commit -m 'My first commit'
+    git add .
+    git commit -m "My first commit"
     ```
 
-1. If you haven't done it already, log into Heroku via the Toolbelt
+1. Log into Heroku
 
     ```
-    $ heroku login
+    heroku login
     ```
 
     Enter the credentials you set up in the [Prerequisites](#prerequisites).
 
-    If Heroku reports that you don't have an existing public key and asks if you'd like to create one, answer yes!
+    *Mac*: If Heroku reports that you don't have an existing public key and asks if you'd like to create one, answer yes!
+
+1. **Windows ONLY**  
+    You need to manually add your SSH public key to Heroku
+
+    *Windows*
+    ```
+    PATH=%PATH%;"C:\Program Files\Git\bin"
+    heroku keys:add
+    ```
+
+    If you're prompted that an existing public key can't be found and you're asked if you'd like to create one, say yes!
+
+    The final output should look something like this
+
+    ```
+    Uploading SSH public key C:/Users/your_username/.ssh/id_rsa.pub... done
+    ```
 
 1. Create your Heroku app
 
     ```
-    $ heroku create
+    heroku create
     ```
 
     You'll see output that looks something like this
@@ -63,12 +108,12 @@ In addition to the [prerequisites you've already set up for the local app](https
 
     If that was the output of your app, your app's URL would be:
 
-    **http://warm-sierra-1964.herokuapp.com**
+    `http://warm-sierra-1964.herokuapp.com/`
 
 1. Deploy your app
 
     ```
-    $ git push heroku master
+    git push heroku master
     ```
 
     If you get a warning that the authenticity of the host heroku.com can't be established and if you'd like to to continue connecting, thereby trusting the Heroku RSA fingerprint, choose yes!
@@ -88,12 +133,12 @@ In addition to the [prerequisites you've already set up for the local app](https
 
 1. Make it your own
 
-    Tinker with the code and deploy your changes:
+    Tinker with the code.  Then deploy your changes:
 
     ```
-    $ git add .
-    $ git commit -m 'a description of your change'
-    $ git push heroku master
+    git add .
+    git commit -m "a description of your change"
+    git push heroku master
     ```
 
 ## What did I just do?
