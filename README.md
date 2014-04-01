@@ -21,7 +21,7 @@ In addition to the [prerequisites you've already set up for the local app](https
 1. Open each of the above files in **Sublime Text 2** and copy/paste their associated content from the following sources:
 
     [Procfile](/Procfile)
-    
+
     [.gitignore](/.gitignore)
 
 1. Initialize a local Git repository
@@ -42,7 +42,7 @@ In addition to the [prerequisites you've already set up for the local app](https
     ```
     $ heroku login
     ```
-    
+
     Enter the credentials you set up in the [Prerequisites](#prerequisites).
 
     If Heroku reports that you don't have an existing public key and asks if you'd like to create one, answer yes!
@@ -52,17 +52,17 @@ In addition to the [prerequisites you've already set up for the local app](https
     ```
     $ heroku create
     ```
-    
+
     You'll see output that looks something like this
-    
+
     ```
     Creating warm-sierra-1964... done, stack is cedar
     http://warm-sierra-1964.herokuapp.com/ | git@heroku.com:warm-sierra-1964.git
     Git remote heroku added
     ```
-    
+
     If that was the output of your app, your app's URL would be:
-    
+
     **http://warm-sierra-1964.herokuapp.com**
 
 1. Deploy your app
@@ -70,11 +70,11 @@ In addition to the [prerequisites you've already set up for the local app](https
     ```
     $ git push heroku master
     ```
-    
+
     If you get a warning that the authenticity of the host heroku.com can't be established and if you'd like to to continue connecting, thereby trusting the Heroku RSA fingerprint, choose yes!
 
     You'll see a bunch of output, but if everything was successful, the end will look something like this:
-    
+
     ```
     ...
     http://warm-sierra-1964.herokuapp.com/ deployed to Heroku
@@ -104,6 +104,6 @@ In addition to the [prerequisites you've already set up for the local app](https
 
 * Heroku gives you a generated URL under their __*.herokuapp.com__ domain.  If you want to associate your app with a custom domain, you can learn more about that [here](https://devcenter.heroku.com/articles/custom-domains).
 
-* Wanna see a live version of the Lemonade Stand App?  Check out: 
+* Wanna see a live version of the Lemonade Stand App?  Check out:
 
     http://lemonade.targetrad.com
