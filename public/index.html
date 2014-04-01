@@ -25,9 +25,14 @@
 
             /* styles for the pop-up InfoWindow */
             #info-window {
-                width: 150px;
+                width: 180px;
                 text-align: center;
                 height: 40px;
+            }
+            #info-window img {
+                width: 40px;
+                height: 40px;
+                float: left;
             }
         </style>
 
@@ -35,7 +40,7 @@
     </head>
 
     <body>
-        <!-- 
+        <!--
         This div block defines the structure of the page
         -->
         <div>
@@ -83,8 +88,11 @@
                         map: map
                     });
 
-                    // add a pop-up InfoWindow to show the location's description
-                    var content = '<div id="info-window">' + data.description + '</div>';
+                    // add a pop-up InfoWindow to show the location's description (and a friendly icon)
+                    var content = '<div id="info-window">' +
+                      '<img src="http://www.public-domain-photos.com/free-cliparts-1/food/beverages/lemonade.png"/>' +
+                      data.description +
+                      '</div>';
                     var infoWindow = new google.maps.InfoWindow({ content: content });
                     infoWindow.open(map, marker);
                 });
