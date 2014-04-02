@@ -43,6 +43,8 @@ In addition to the [prerequisites you've already set up for the local app](https
 
     [.gitignore](/.gitignore)
 
+    **IMPORTANT**: Be sure to save the changes to the files (*File* > *Save*)
+
 1. Tell Git who you are
 
     **NOTE**: You don't need to this if you've already got Git set up with your name and email
