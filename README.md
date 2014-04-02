@@ -86,6 +86,8 @@ This repository contains instructions and source code for a simple web app that 
 
     [/public/index.html](/public/index.html)
 
+    **IMPORTANT**: Be sure to save the changes to the files (*File* > *Save*)
+
 1. Start your app
 
     ```
