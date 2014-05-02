@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "~3.5.1"
+    "express": "~3.5.1",
+    "google-spreadsheet": "~0.2.8"
   }
 }

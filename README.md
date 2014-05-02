@@ -54,6 +54,12 @@ This repository contains instructions and source code for a simple web app that 
     npm install express --save
     ```
 
+1. Install Google Spreadsheets library
+
+    ```
+    npm install google-spreadsheet --save
+    ```
+
 1. Run **Sublime Text 2** and open the project directory
 
     *Mac*: *File* menu > *Open...* > (browse to above directory)
@@ -106,13 +112,15 @@ This repository contains instructions and source code for a simple web app that 
 
 ## What's going on?
 
-* The [web.js](/web.js) file is the only server-side code (running in Node.js), and it's basically serving up static client-side content out of the `public` directory.
+* The [web.js](/web.js) file is the only server-side code (running in Node.js), and it's basically serving up static client-side content out of the `public` directory as well as a simple API endpoint for the lemonade stand location.
+
+* The API endpoint is `/api/location` and returns the current lemonade stand location, which is obtained by consuming a published Google Spreadsheet by calling the [Google Spreadsheets API](https://developers.google.com/google-apps/spreadsheets/) via a very handy Node.js library called [google-spreadsheet](https://github.com/theoephraim/node-google-spreadsheet).
+
+* The published version of the Google Spreadsheet consumed by the endpoint can be [seen here](https://docs.google.com/spreadsheets/d/1MxOkAmSITKl6dKSQjkUkU72UcXPykTfn2Eae5BsL5pA/pubhtml).
 
 * The [public/index.html](/public/index.html) file is essentially the entire client-side app.  The HTML in the page provides the layout, the `<style>` block provides the CSS styling.  The real magic happens in `<script>` block that contains the client-side JavaScript.
 
-* When the page first loads, that JavaScript code makes an AJAX call to the [Lemonade Stand API](http://api.lemonade.targetrad.com/location/today) to get today's location of the stand.
-
-  **NOTE:** That API is just for demo purposes and actually randomly returns one of a handful of locations with each call.  The API is a Heroku app and you can see its source code [here](https://github.com/TargetRAD/lemonade-api).
+* When the page first loads, that JavaScript code makes an AJAX call to the API endpoint to get today's location of the stand.
 
 * The page then renders a [Google Maps](https://developers.google.com/maps/) object centered on the location returned by the API and creates an associated [Marker](https://developers.google.com/maps/documentation/javascript/reference?csw=1#Marker) and [InfoWindow](https://developers.google.com/maps/documentation/javascript/reference?csw=1#InfoWindow) to pinpoint the location of the lemonade stand.
 
