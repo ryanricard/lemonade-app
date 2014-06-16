@@ -8,10 +8,19 @@ In addition to the [prerequisites you've already set up for the local app](https
 
 1. Sign up for a [free Heroku Account](https://id.heroku.com/signup/www-header)
 1. Install the [Heroku Toolbelt](https://toolbelt.heroku.com/)
+1. **Windows ONLY**: Install [GitHub for Windows](https://windows.github.com/)  
+We won't actually be using the [GitHub](http://github.com) service, but their Windows client (specifically, their **Git Shell**) solves a lot of the ugly SSH issues in Windows.
 
 ## Steps
 
-1. Open up your command prompt again and make sure you're back in your project's directory
+1. Open a command prompt
+
+   *Mac*: Run the **Terminal** app
+
+   *Windows*: Double-click the **Git Shell** icon on your desktop  
+   **NOTE:** This is a different command prompt than what we used when we built the [local app](https://github.com/TargetRAD/lemonade-app).
+
+1. Make sure you're back in your project's directory
 
     *Mac*
     ```
@@ -33,11 +42,11 @@ In addition to the [prerequisites you've already set up for the local app](https
 
     *Windows*
     ```
-    type NUL > Procfile
-    type NUL > .gitignore
+    echo $null > Procfile
+    echo $null > .gitignore
     ```
 
-1. Open each of the above files in **Sublime Text 2** and copy/paste their associated content from the following sources:
+1. Open each of the above files in **Sublime Text 2** and copy/paste their associated content from the following sources
 
     [Procfile](/Procfile)
 
@@ -78,11 +87,10 @@ In addition to the [prerequisites you've already set up for the local app](https
     *Mac*: If Heroku reports that you don't have an existing public key and asks if you'd like to create one, answer yes!
 
 1. **Windows ONLY**  
+
     You need to manually add your SSH public key to Heroku
 
-    *Windows*
     ```
-    PATH=%PATH%;"C:\Program Files\Git\bin"
     heroku keys:add
     ```
 
