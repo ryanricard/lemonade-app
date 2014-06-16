@@ -51,13 +51,13 @@ This repository contains instructions and source code for a simple web app that 
 1. Install Express.js
 
     ```
-    npm install express --save
+    npm install express@3.5 --save
     ```
 
 1. Install Google Spreadsheets library
 
     ```
-    npm install google-spreadsheet --save
+    npm install google-spreadsheet@0.2 --save
     ```
 
 1. Run **Sublime Text 2** and open the project directory
