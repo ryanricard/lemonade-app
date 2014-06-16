@@ -8,9 +8,9 @@ This repository contains instructions and source code for a simple web app that 
 
 1. A **Mac** (running OSX 10.8 or better) or a **PC** (running Windows 7 or better)
 1. Admin rights on your Mac or PC
-1. [Install Google Chrome](https://www.google.com/intl/en/chrome/browser/)
-1. [Install Node.js](http://nodejs.org/download/)
-1. [Install Sublime Text 2](http://www.sublimetext.com/2) (any decent text editor will do)
+1. Install [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+1. Install [Node.js](http://nodejs.org/download/)
+1. Install [Sublime Text 2](http://www.sublimetext.com/2) (any decent text editor will do)
 
 ## Steps
 
@@ -20,18 +20,19 @@ This repository contains instructions and source code for a simple web app that 
 
     *Windows*: Start > Run > `cmd`
 
-1. In the command prompt, create the app directory
+1. In the command prompt, create the app directory  
+**NOTE:** We're putting it on the Desktop just for easy access
 
     *Mac*
     ```
-    cd ~/Documents
+    cd ~/Desktop
     mkdir lemonade-app
     cd lemonade-app
     ```
 
     *Windows*
     ```
-    cd %USERPROFILE%\Documents
+    cd %USERPROFILE%\Desktop
     mkdir lemonade-app
     cd lemonade-app
     ```
