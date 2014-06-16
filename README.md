@@ -24,12 +24,12 @@ We won't actually be using the [GitHub](http://github.com) service, but their Wi
 
     *Mac*
     ```
-    cd ~/Documents/lemonade-app
+    cd ~/Desktop/lemonade-app
     ```
 
     *Windows*
     ```
-    cd %USERPROFILE%\Documents\lemonade-app
+    cd %USERPROFILE%\Desktop\lemonade-app
     ```
 
 1. Create empty code files necessary for deployment to Heroku
