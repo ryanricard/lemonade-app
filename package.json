@@ -1,15 +1,23 @@
 {
-  "name": "lemonadestand-app",
+  "name": "lemonade-app",
   "version": "1.0.0",
-  "description": "## Prerequisites",
+  "description": "So you have a cool idea for an app, but don't know where to start?  Sometimes you just need to a good example.",
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TargetRAD/lemonade-app.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TargetRAD/lemonade-app/issues"
+  },
+  "homepage": "https://github.com/TargetRAD/lemonade-app",
   "dependencies": {
-    "express": "~3.5.1",
-    "google-spreadsheet": "~0.2.8"
+    "express": "^3.5.3",
+    "google-spreadsheet": "^0.2.8"
   }
 }
